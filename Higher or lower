@@ -12,7 +12,9 @@ def easy_mode():
             print(f'Too Low, you have {guesses} guesses left')
         else:
             print("You got it")
-            guesses = 0
+            return
+    if guesses == 0:
+        print(f"Game over, you lose the number was {the_number}")
 def hard_mode():
     guesses = 5
     while guesses != 0:
@@ -24,7 +26,9 @@ def hard_mode():
             print(f'Too Low, you have {guesses} guesses left')
         else:
             print("You got it")
-            guesses = 0
+            return
+    if guesses == 0:
+        print(f"Game over, you lose the number was {the_number}")
 print("Welcome to the Number Guessing Game!")
 print("I'm thinking of a number between 1 and 100.")
 print("Choose a difficulty.")
